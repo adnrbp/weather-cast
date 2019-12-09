@@ -15,12 +15,54 @@ class Weather extends StatelessWidget {
       ),
     );
 
+    Widget tempSection = Container(
+      padding: EdgeInsets.symmetric(
+        vertical: 10.0,
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text( //Text of temperature
+            '20',
+            style: TextStyle(
+              fontSize: 80.0,
+            ),
+          ),
+
+          Expanded( // Upper icon of Celcius
+            child: Container(
+              padding: EdgeInsets.only(
+                top: 12.0,
+              ),
+              margin: EdgeInsets.only(
+                left: 6.0,
+              ),
+              child: Text(
+                '\u2103',
+                style: TextStyle(
+                  fontSize: 24.0,
+                ),
+              ),
+            ),
+          ),
+
+          Image.asset( //Cloud Image
+            'assets/img/cloudy.png',
+            width: 100.0,
+            height: 100.0,
+            fit: BoxFit.cover,
+          )
+        ],
+      ),
+    );
+    
     return Container(
       padding: const EdgeInsets.all(60.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start, //align to left hand side of the column
         children: <Widget>[
           dateSection,
+          tempSection,
         ],
       ),
     );
