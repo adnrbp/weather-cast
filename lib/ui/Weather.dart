@@ -55,6 +55,31 @@ class Weather extends StatelessWidget {
         ],
       ),
     );
+
+    Widget descriptionSection = Container(
+      child: Row(
+        // Same amount of space between the widgets
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text(
+            'Tokyo',
+            style: TextStyle(
+              fontSize: 24.0,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          ),
+          Text(
+            'Cloudy',
+            style: TextStyle(
+              fontSize: 24.0,
+              color: Colors.white,
+            ),
+          ),
+        ],
+      ),
+    );
     
     return Container(
       padding: const EdgeInsets.all(60.0),
@@ -63,6 +88,7 @@ class Weather extends StatelessWidget {
         children: <Widget>[
           dateSection,
           tempSection,
+          descriptionSection,
         ],
       ),
     );
